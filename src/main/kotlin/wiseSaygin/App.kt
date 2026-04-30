@@ -50,9 +50,19 @@ class App {
                         continue
                     }
 
-//                    wiseSayings.removeIf {
-//                        it.id == id
-//                    }
+                    val target = wiseSayings.firstOrNull {
+                        it.id == id
+                    }
+
+                    if (target == null) {
+                        println("${id}번 명언은 존재하지 않습니다.")
+                        continue
+                    }
+
+                    wiseSayings.remove(target)
+                    println("${id}번 명언이 삭제되었습니다.")
+
+
 
                     wiseSayings
                         .firstOrNull {
@@ -60,9 +70,10 @@ class App {
                         }
                         ?.let {
                             wiseSayings.remove(it)
-                        }
+                            println("${id}번 명언이 삭제되었습니다.")
 
-                    println("${id}번 명언이 삭제되었습니다.")
+                        }
+                        ?: println("${id}번 명언은 존재하지 않습니다.")
 
                 }
             }
