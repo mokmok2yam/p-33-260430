@@ -1,4 +1,8 @@
-package wiseSaygin
+package com.back
+
+import com.back.global.Rq
+import com.back.domain.system.controller.SystemController
+import com.back.domain.wiseSaying.controller.WiseSayingController
 
 class App(
     val wiseSayingController: WiseSayingController = WiseSayingController(),
@@ -6,6 +10,7 @@ class App(
 ) {
 
     fun run() {
+
         println("== 명언 앱 ==")
 
         while (true) {

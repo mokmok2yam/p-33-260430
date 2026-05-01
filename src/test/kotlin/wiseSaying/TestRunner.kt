@@ -1,6 +1,6 @@
 package wiseSaying
 
-import wiseSaygin.App
+import com.back.App
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
@@ -20,6 +20,7 @@ object TestRunner {
                     .toByteArray()
             )
         )
+
         return ByteArrayOutputStream().use { outputStream ->
             PrintStream(outputStream).use { printStream ->
                 try {

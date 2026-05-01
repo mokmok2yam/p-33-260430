@@ -1,5 +1,4 @@
-package wiseSaygin
-
+package com.back.domain.system.controller
 
 class SystemController {
     fun exit() {
