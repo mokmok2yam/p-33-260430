@@ -3,10 +3,11 @@ package com.back
 import com.back.global.Rq
 import com.back.domain.system.controller.SystemController
 import com.back.domain.wiseSaying.controller.WiseSayingController
+import com.back.global.SingletonScope
 
 class App(
-    val wiseSayingController: WiseSayingController = WiseSayingController(),
-    val systemController: SystemController = SystemController()
+    val wiseSayingController: WiseSayingController = SingletonScope.wiseSayingController,
+    val systemController: SystemController = SingletonScope.systemController
 ) {
 
     fun run() {
